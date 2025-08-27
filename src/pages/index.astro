@@ -14,17 +14,17 @@ import Calendar from "../components/Calendar.jsx";
 <main>
 	<Navbar client:load/>
 
-	<section id="hero" class="relative w-full h-[60vh] flex items-center justify-center bg-korps2">
-		<video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
-			<source src="/assets/placeholder.mov" type="video/mp4" />
-			Din nettleser støtter ikke video.
-		</video>
-		<div class="relative z-10 text-center text-korps3 bg-korps1/80 p-8 rounded-xl max-w-xl mx-auto">
-			<h1 class="text-4xl font-bold mb-4">Velkommen til Oslo East Wind Band</h1>
-			<p class="mb-6">Korpstilbud for de eldste musikantene i skolekorps i Oslo øst, og de som akkurat har blitt for gamle for skolekorps.</p>
-			<a href="#contact" class="bg-korps2 hover:bg-korps1 text-korps3 font-semibold py-2 px-6 rounded shadow">Bli med!</a>
-		</div>
-	</section>
+		<section id="hero" class="relative w-full h-[50vh] sm:h-[60vh] flex items-center justify-center bg-korps2">
+			<video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+				<source src="/assets/placeholder.mov" type="video/mp4" />
+				Din nettleser støtter ikke video.
+			</video>
+			<div class="relative z-10 text-center text-korps3 bg-korps1/80 p-4 sm:p-8 rounded-xl w-full max-w-xl mx-2 sm:mx-auto">
+				<h1 class="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">Velkommen til Oslo East Wind Band</h1>
+				<p class="mb-4 sm:mb-6 text-base sm:text-lg">Korpstilbud for de eldste musikantene i skolekorps i Oslo øst, og de som akkurat har blitt for gamle for skolekorps.</p>
+				<a href="#contact" class="inline-block bg-korps2 hover:bg-korps1 text-korps3 font-semibold py-2 px-4 sm:px-6 rounded shadow text-base sm:text-lg">Bli med!</a>
+			</div>
+		</section>
 
 
 		<section id="about" class="container mx-auto py-16">
