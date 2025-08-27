@@ -1,16 +1,65 @@
 ---
-
+import "../styles/global.css";
+import Navbar from "../components/Navbar";
+import Calendar from "../components/Calendar.jsx";
 ---
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="description" content="Oslo East Wind Band – korpstilbud for de eldste musikantene i skolekorps i Oslo øst." />
+	<title>Oslo East Wind Band</title>
+</head>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<main>
+	<Navbar client:load/>
+
+	<section id="hero" class="relative w-full h-[60vh] flex items-center justify-center bg-korps2">
+		<video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+			<source src="/assets/placeholder.mov" type="video/mp4" />
+			Din nettleser støtter ikke video.
+		</video>
+		<div class="relative z-10 text-center text-korps3 bg-korps1/80 p-8 rounded-xl max-w-xl mx-auto">
+			<h1 class="text-4xl font-bold mb-4">Velkommen til Oslo East Wind Band</h1>
+			<p class="mb-6">Korpstilbud for de eldste musikantene i skolekorps i Oslo øst, og de som akkurat har blitt for gamle for skolekorps.</p>
+			<a href="#contact" class="bg-korps2 hover:bg-korps1 text-korps3 font-semibold py-2 px-6 rounded shadow">Bli med!</a>
+		</div>
+	</section>
+
+
+		<section id="about" class="container mx-auto py-16">
+			<h2 class="text-3xl font-bold mb-4">Om oss</h2>
+			<p class="mb-4">Oslo East Wind Band er et korpstilbud for ungdom og unge voksne fra skolekorpsmiljøet i Oslo øst. Her får du mulighet til å fortsette med musikk, få nye venner og delta på spennende prosjekter og konserter.</p>
+			<ul class="list-disc ml-6 mb-4">
+				<li>For deg som er 16+ og vil spille videre</li>
+				<li>Gode instruktører og sosialt miljø</li>
+				<li>Øvelser i Oslo øst</li>
+			</ul>
+		</section>
+
+		<Calendar client:load />
+
+	<section id="contact" class="container mx-auto py-16">
+		<h2 class="text-3xl font-bold mb-4">Kontakt oss</h2>
+		<form class="max-w-lg mx-auto bg-white p-8 rounded shadow flex flex-col gap-4">
+			<label class="font-semibold">Navn
+				<input type="text" name="navn" required class="mt-1 p-2 border rounded w-full" />
+			</label>
+			<label class="font-semibold">E-post
+				<input type="email" name="epost" required class="mt-1 p-2 border rounded w-full" />
+			</label>
+			<label class="font-semibold">Melding
+				<textarea name="melding" required rows="4" class="mt-1 p-2 border rounded w-full"></textarea>
+			</label>
+			<button type="submit" class="bg-korps1/80 hover:bg-korps1 text-white font-semibold py-2 px-6 rounded">Send</button>
+		</form>
+	</section>
+
+	<footer class="bg-korps1 py-8 mt-16">
+		<div class="container mx-auto text-center text-korps3">
+			<div>Oslo East Wind Band &copy; 2025</div>
+			<div>Org.nr: 123 456 789</div>
+			<div>E-post: kontakt@osloeastwindband.no</div>
+		</div>
+	</footer>
+</main>

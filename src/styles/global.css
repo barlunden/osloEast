@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --color-korps1: oklch(30% 25% 279deg);
+  --color-korps2: oklch(61% 56% 27deg);
+  --color-korps3: oklch(99% 0% 68deg);   
+}
