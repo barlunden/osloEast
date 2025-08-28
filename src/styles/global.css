@@ -1,7 +1,53 @@
 @import "tailwindcss";
 
+
+/* Fargar: oer = osloEastRed, oeb = osloEastBlue, oeg = osloEastGray, oebl = osloEastBlåGRrå */
 @theme {
   --color-korps1: oklch(30% 25% 279deg);
   --color-korps2: oklch(61% 56% 27deg);
-  --color-korps3: oklch(99% 0% 68deg);   
+  --color-korps3: oklch(99% 0% 68deg);
+  --color-oeb-50: #f2f1ff;
+  --color-oeb-100: #e9e5ff;
+  --color-oeb-200: #d4ceff;
+  --color-oeb-300: #b5a7ff;
+  --color-oeb-400: #9376ff;
+  --color-oeb-500: #723fff;
+  --color-oeb-600: #6218ff;
+  --color-oeb-700: #5407fa;
+  --color-oeb-800: #4605d2;
+  --color-oeb-900: #3b06ac;
+  --color-oeb-950: #280090;
+  --color-oer-50: #fff0f0;
+  --color-oer-100: #ffdddd;
+  --color-oer-200: #ffc0c1;
+  --color-oer-300: #ff9495;
+  --color-oer-400: #ff5758;
+  --color-oer-500: #ff2325;
+  --color-oer-600: #fc0002;
+  --color-oer-700: #d70002;
+  --color-oer-800: #b10304;
+  --color-oer-900: #920a0b;
+  --color-oer-950: #500001;
+  --color-oeg-50: #f7f7f7;
+  --color-oeg-100: #ededed;
+  --color-oeg-200: #dedede;
+  --color-oeg-300: #c8c8c8;
+  --color-oeg-400: #adadad;
+  --color-oeg-500: #999999;
+  --color-oeg-600: #888888;
+  --color-oeg-700: #7b7b7b;
+  --color-oeg-800: #676767;
+  --color-oeg-900: #545454;
+  --color-oeg-950: #363636;
+  --color-oebl-50: #e8ebf7;
+--color-oebl-100: #d5daf0;
+--color-oebl-200: #b1badb;
+--color-oebl-300: #8994b8;
+--color-oebl-400: #616b96;
+--color-oebl-500: #495383;
+--color-oebl-600: #39406b;
+--color-oebl-700: #2f3658;
+--color-oebl-800: #23263d;
+--color-oebl-900: #181a28;
+--color-oebl-950: #11111a;
 }
