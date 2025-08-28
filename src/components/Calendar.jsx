@@ -23,13 +23,19 @@ const events = [
     description: "Åpen konsert for familie og venner.",
   },
   {
-    date: "2025-11-22",
+    date: "2025-12-22",
     title: "Julekonsert",
     time: "18:30",
     location: "Konsertsalen, Oslo øst",
     description: "Konsert med gjester fra Bablo og Flipp Klipp.",
   },
 ];
+
+
+function formatDate(dateStr) {
+  const [year, month, day] = dateStr.split("-");
+  return `${day}.${month}.${year}`;
+}
 
 export default function Calendar() {
   const [selected, setSelected] = useState(null);
@@ -48,7 +54,7 @@ export default function Calendar() {
               {event.title}
             </div>
             <div className="text-xs sm:text-sm text-korps2 mb-2">
-              {event.date} kl. {event.time}
+              {formatDate(event.date)} kl. {event.time}
             </div>
             <div className="text-xs sm:text-sm text-oebl-600 mb-2">
               {event.location}
@@ -78,7 +84,7 @@ export default function Calendar() {
               {events[selected].title}
             </div>
             <div className="mb-1 text-korps2 text-sm">
-              {events[selected].date} kl. {events[selected].time}
+              {formatDate(events[selected].date)} kl. {events[selected].time}
             </div>
             <div className="mb-2 text-oebl-600 text-sm">
               {events[selected].location}
