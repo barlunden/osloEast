@@ -10,15 +10,15 @@ import Layout from "../layout/Layout.astro";
 			Din nettleser støtter ikke video.
 		</video>
 		<div class="relative z-10 text-center text-oeg-50 bg-oeb-950/90 p-4 sm:p-8 rounded-xl w-full max-w-xl mx-2 sm:mx-auto">
-			<h1 class="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4">Velkommen til Oslo East Wind Ensemble</h1>
+			<h1 class="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4 tracking-wide">Velkommen til Oslo East Wind Ensemble</h1>
 			<p class="mb-4 sm:mb-6 text-base sm:text-lg">Korpstilbud for de eldste musikantene i skolekorps i Oslo øst, og de som akkurat har blitt for gamle for skolekorps.</p>
-			<a href="#contact" class="inline-block bg-oer-700 hover:bg-korps1 text-korps3 font-semibold py-2 px-4 sm:px-6 rounded shadow text-base sm:text-lg">Bli med!</a>
+			<a href="#contact" class="inline-block bg-gradient-to-b from-oer-700 to-oer-900 hover:bg-korps1 text-korps3 font-semibold py-2 px-4 sm:px-6 rounded shadow text-base sm:text-lg transition-colors">Bli med!</a>
 		</div>
 	</section>
 	
 	
 	<section id="about" class="container mx-auto max-md:px-4 text-oebl-950 py-16">
-		<h2 class="text-3xl font-bold mb-4">Om oss</h2>
+		<h2 class="text-3xl font-bold mb-4 tracking-wide">Om oss</h2>
 		<p class="mb-4">Oslo East Wind Band er et korpstilbud for ungdom og unge voksne fra skolekorpsmiljøet i Oslo øst. Her får du mulighet til å fortsette med musikk, få nye venner og delta på spennende prosjekter og konserter.</p>
 		<ul class="list-disc ml-6 mb-4">
 			<li>For deg som er 16+ og vil spille videre</li>
@@ -30,7 +30,7 @@ import Layout from "../layout/Layout.astro";
 	<Calendar client:visible />
 	
 	<section id="contact" class="container mx-auto max-md:px-4 py-16">
-		<h2 class="text-3xl font-bold mb-4">Kontakt oss</h2>
+		<h2 class="text-3xl font-bold mb-4 tracking-wide">Kontakt oss</h2>
 		<form class="max-w-lg mx-auto bg-white p-8 rounded shadow flex flex-col gap-4">
 			<label class="font-semibold">Navn
 				<input type="text" name="navn" required class="mt-1 p-2 border rounded w-full" />
@@ -41,7 +41,7 @@ import Layout from "../layout/Layout.astro";
 			<label class="font-semibold">Melding
 				<textarea name="melding" required rows="4" class="mt-1 p-2 border rounded w-full"></textarea>
 			</label>
-			<button type="submit" class="bg-oeb-950/80 hover:bg-oeb-950 text-white font-semibold py-2 px-6 rounded">Send</button>
+			<button type="submit" class="bg-gradient-to-b from-oeb-600 to-oeb-950 hover:bg-oeb-950 text-white font-semibold py-2 px-6 rounded">Send</button>
 		</form>
 	</section>
 </Layout>

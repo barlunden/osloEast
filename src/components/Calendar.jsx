@@ -42,7 +42,7 @@ export default function Calendar() {
 
   return (
     <section id="calendar" className="container mx-auto max-md:px-4 py-16">
-      <h2 className="text-3xl font-bold mb-4">Aktivitetskalender</h2>
+      <h2 className="text-3xl font-bold mb-4 tracking-wide">Aktivitetskalender</h2>
       <ul className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2">
         {events.map((event, idx) => (
           <li
@@ -50,16 +50,16 @@ export default function Calendar() {
             className="bg-oeg-50 rounded shadow p-4 sm:p-6 hover:bg-oebl-950/10 hover:shadow-md transition-all cursor-pointer"
             onClick={() => setSelected(idx)}
           >
-            <div className="font-semibold text-base sm:text-lg mb-1">
+            <div className="font-semibold text-base tracking-wide sm:text-lg mb-1">
               {event.title}
             </div>
-            <div className="text-xs sm:text-sm text-korps2 mb-2">
+            <div className="text-xs sm:text-sm text-oebl-950 mb-2">
               {formatDate(event.date)} kl. {event.time}
             </div>
-            <div className="text-xs sm:text-sm text-oebl-600 mb-2">
+            <div className="text-xs sm:text-sm text-oebl-700 mb-2">
               {event.location}
             </div>
-            <div className="text-oebl-700 text-sm sm:text-base">
+            <div className="text-oebl-800 text-sm sm:text-base">
               {event.description}
             </div>
           </li>
@@ -80,10 +80,10 @@ export default function Calendar() {
             >
               &times;
             </button>
-            <div className="font-bold text-xl sm:text-2xl mb-2">
+            <div className="font-bold text-xl tracking-wide sm:text-2xl mb-2">
               {events[selected].title}
             </div>
-            <div className="mb-1 text-korps2 text-sm">
+            <div className="mb-1 text-oebl-900 text-sm">
               {formatDate(events[selected].date)} kl. {events[selected].time}
             </div>
             <div className="mb-2 text-oebl-600 text-sm">
