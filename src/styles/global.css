@@ -51,3 +51,8 @@
 --color-oebl-900: #181a28;
 --color-oebl-950: #11111a;
 }
+
+.clip {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}

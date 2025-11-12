@@ -1,0 +1,23 @@
+---
+import "../styles/global.css"
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+const { title } = Astro.props;
+---
+<html lang="nb">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content="Oslo East Wind Band – korpstilbud for de eldste musikantene i skolekorps i Oslo øst." />
+        <title>Oslo East Wind Ensemble</title>
+    </head>
+    <body>
+        <Navbar client:load/>
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </body>
+
+</html>
