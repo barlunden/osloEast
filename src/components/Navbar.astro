@@ -7,12 +7,55 @@ const navLinks = [
 ];
 ---
 <header class="sticky top-0 z-50 transition-all duration-300 bg-oeg-100 text-oeb-950 shadow">
-  <nav class="container mx-auto flex flex-col sm:flex-row justify-between items-center py-2 sm:py-4 px-2 sm:px-0">
+  <nav class="container mx-auto flex flex-col sm:flex-row justify-between items-center py-2 sm:py-4 px-2 sm:px-0 relative">
     <div class="font-bold text-lg sm:text-xl text-oeb-950 mb-2 sm:mb-0">Oslo East Wind Ensemble</div>
-    <ul class="flex flex-col sm:flex-row gap-2 sm:gap-6 w-full sm:w-auto text-base sm:text-lg">
+    <!-- Hamburger button (visible on mobile) -->
+     <button
+     id="hamburger-btn"
+     class="sm:hidden absoulute right-2 top-2 p-2 rounded focus:ouline-none focus:ring-2 focus:ring-oeb-950"
+     aria-label="Åpne meny"
+     type="button"
+     >
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <ul 
+      id="nav-menu"
+      class="flex flex-col sm:flex-row gap-2 sm:gap-6 w-full sm:w-auto text-base sm:text-lg
+        bg-oeg-100 sm:bg-transparent absolute sm:static left-0 right-0 top-full sm:top-auto
+        shadow sm:shadow-none transition-all duration-300
+        max-h-0 sm:max-h-none overflow-hidden sm:overflow-visible
+      "
+    >
       {navLinks.map(link => (
-        <li><a href={link.href} class="hover:text-oer-800 text-oeb-950">{link.label}</a></li>
+        <li><a href={link.href} class="block px-4 py-2 hover:text-oer-800 text-oeb-950">{link.label}</a></li>
       ))}
     </ul>
   </nav>
+  <script>
+    // Enkel toggling av menyen på mobil
+    const btn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('nav-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('max-h-0');
+        menu.classList.toggle('max-h-60');
+        menu.classList.toggle('py-2');
+      });
+    }
+  </script>
+  <style>
+    /* For smooth open/close på mobil */
+    #nav-menu {
+      transition: max-height 0.3s, padding 0.3s;
+    }
+    @media (min-width: 640px) {
+      #nav-menu {
+        max-height: none !important;
+        padding: 0 !important;
+      }
+    }
+  </style>
 </header>
