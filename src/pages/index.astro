@@ -10,28 +10,31 @@ import Layout from "../layout/Layout.astro";
 			Din nettleser støtter ikke video.
 		</video>
 		<div class="relative z-10 text-center bg-transparent text-oebl-50 p-4 sm:p-8 rounded-xl w-full max-w-xl mx-2 sm:mx-auto">
-			<h1 class="text-2xl sm:text-4xl font-bold mb-2 sm:mb-4 tracking-wide text-shadow-sm sm:text-shadow-md text-shadow-oebl-900">Oslo East Wind Ensemble</h1>
-			<p class="max-md:hidden mb-4 sm:mb-6 text-base text-shadow-md text-shadow-oebl-800/70 sm:text-lg">Korpstilbud for de eldste musikantene i skolekorps i Oslo øst, og de som akkurat har blitt for gamle for skolekorps.</p>
-			<a href="#contact" class="inline-block bg-gradient-to-b from-oer-700 to-oer-900 hover:bg-korps1 text-korps3 font-semibold py-2 px-4 sm:px-6 rounded shadow text-base sm:text-lg transition-colors">Bli med!</a>
+			<h1 class="text-2xl sm:text-6xl font-bold mb-2 sm:mb-4 tracking-wider text-shadow-sm sm:text-shadow-md text-shadow-oebl-900">Oslo Øst Blåseensemble</h1>
+			<p class="max-md:hidden mb-4 sm:mb-6 text-base text-shadow-md text-shadow-oebl-800/70 sm:text-3xl font-semibold tracking-wide">- et korps for ungdommer 13-19 år fra Oslo øst.</p>
+			<a href="#contact" class="inline-block bg-gradient-to-b  from-oer-700 to-oer-900 hover:bg-korps1 text-korps3 font-semibold py-1 sm:py-2 px-4 sm:px-6 rounded shadow-2xl shadow-black text-base sm:text-lg transition-colors">Bli med!</a>
 		</div>
 	</section>
 	
 	
 	<section id="about" class="container mx-auto max-md:px-4 text-oebl-950 py-16">
-		<h2 class="text-3xl font-bold mb-4 tracking-wide">Om oss</h2>
-		<p class="mb-4">Oslo East Wind Band er et korpstilbud for ungdom og unge voksne fra skolekorpsmiljøet i Oslo øst. Her får du mulighet til å fortsette med musikk, få nye venner og delta på spennende prosjekter og konserter.</p>
-		<ul class="list-disc ml-6 mb-4">
-			<li>For deg som er 16+ og vil spille videre</li>
-			<li>Gode instruktører og sosialt miljø</li>
-			<li>Øvelser i Oslo øst</li>
-		</ul>
+		<h2 class="max-w-3xl mx-auto text-3xl font-bold mb-6 tracking-wide">Om oss</h2>
+		<div class="max-w-3xl mx-auto space-y-4 text-lg">
+			<p class="mb-4">Velkommen til Oslo Øst Blåseensemble sine nettsider.</p>
+			
+			<p class="mb-4">Oslo Øst Blåseensemble samler unge musikanter fra 13–19 år, fra Oslo øst og nærområdene. Ensemblet fungerer som et springbrett i overgangen fra skolekorps til voksenliv som musiker.</p>
+			
+			<p class="mb-4">Vi gir ungdom med musikkinteresse en unik mulighet til å utvikle seg videre, og til å bygge bro mellom oppvekst i skolekorps og et liv med musikk som ung voksen. Oslo Øst Blåseensemble er et supplement til skolekorpsene: Vi tilbyr et inspirerende miljø og nye musikalske utfordringer utover det vanlige korpslivet i tenårene. Hos oss får de unge dyrke musikkgleden, bygge solid kompetanse – og forhåpentligvis et varig ønske om å fortsette å spre musikkglede også videre i livet.</p>
+			
+			<p class="mb-4">Gjennom vårt tilbud ønsker vi også å styrke skolekorpsene i området, både faglig og i rekrutteringen, slik at de får enda bedre vilkår for å gi barn og unge gode musikkopplevelser på både kort og lang sikt.</p>
+		</div>
 	</section>
 	
 	<Calendar client:visible />
 	
 	<section id="contact" class="container mx-auto max-md:px-4 py-16">
-		<h2 class="text-3xl font-bold mb-4 tracking-wide">Kontakt oss</h2>
-		<form class="max-w-lg mx-auto bg-white p-8 rounded shadow flex flex-col gap-4">
+		<h2 class="max-w-3xl mx-auto text-3xl font-bold mb-4 tracking-wide">Kontakt oss</h2>
+		<form class="max-w-3xl mx-auto bg-white p-8 rounded shadow flex flex-col gap-4">
 			<label class="font-semibold">Navn
 				<input type="text" name="navn" required class="mt-1 p-2 border rounded w-full" />
 			</label>

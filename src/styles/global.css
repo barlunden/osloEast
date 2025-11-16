@@ -1,5 +1,9 @@
 @import "tailwindcss";
+@import '@fontsource-variable/montserrat';
 
+body {
+  font-family: 'Montserrat Variable', sans-serif;
+}
 
 /* Fargar: oer = osloEastRed, oeb = osloEastBlue, oeg = osloEastGray, oebl = osloEastBlåGRrå */
 @theme {
