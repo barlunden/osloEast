@@ -45,7 +45,7 @@ export default function Calendar() {
 		>
       <div className="max-w-3xl mx-auto max-md:px-4 py-16 ">
 
-			<h2 className="text-4xl font-extrabold mb-8 tracking-wide text-white drop-shadow">
+			<h2 className="text-2xl sm:text-4xl font-extrabold mb-8 tracking-wide text-white drop-shadow">
 				Aktivitetskalender
 			</h2>
 			<ul className="grid gap-8 grid-cols-1 md:grid-cols-2">
