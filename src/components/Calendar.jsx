@@ -52,7 +52,7 @@ export default function Calendar() {
 				{events.map((event, idx) => (
           <li
           key={idx}
-          className="bg-white rounded-xl shadow-lg p-6 hover:bg-oebl-100 hover:shadow-2xl transition-all cursor-pointer border border-oebl-300"
+          className="bg-white rounded-[calc(var(--radius-base)+var(--padding-base))] shadow-lg p-6 hover:bg-oebl-100 hover:shadow-2xl transition-all cursor-pointer border border-oebl-300"
           onClick={() => setSelected(idx)}
 					>
 						<div className="font-bold text-xl tracking-wide mb-2 text-oebl-900">
@@ -78,7 +78,7 @@ export default function Calendar() {
         onClick={() => setSelected(null)}
 				>
 					<div
-						className="bg-oebl-900 text-white rounded-2xl p-8 w-full max-w-md shadow-2xl relative"
+						className="bg-oebl-900 text-white rounded-[calc(var(--radius-base)+var(--padding-base))] p-8 w-full max-w-md shadow-2xl relative"
 						onClick={(e) => e.stopPropagation()}
             >
 						<button

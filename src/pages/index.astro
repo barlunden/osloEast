@@ -12,7 +12,7 @@ import Layout from "../layout/Layout.astro";
 		<div class="relative z-10 text-center bg-transparent text-oebl-50 p-4 sm:p-8 rounded-xl w-full max-w-xl mx-2 sm:mx-auto">
 			<h1 class="text-2xl sm:text-6xl font-bold mb-2 sm:mb-4 tracking-wider text-shadow-sm sm:text-shadow-md text-shadow-oebl-900">Oslo Øst Blåseensemble</h1>
 			<p class="max-md:hidden mb-4 sm:mb-6 text-base text-shadow-md text-shadow-oebl-800/70 sm:text-3xl font-semibold tracking-wide">- et korps for ungdommer 13-19 år fra Oslo øst.</p>
-			<a href="#contact" class="inline-block bg-gradient-to-b  from-oer-700 to-oer-900 hover:bg-korps1 text-korps3 font-semibold py-1 sm:py-2 px-4 sm:px-6 rounded shadow-2xl shadow-black text-base sm:text-lg transition-colors">Bli med!</a>
+			<a href="#contact" class="inline-block bg-gradient-to-b  from-oer-700 to-oer-900 hover:bg-korps1 text-korps3 font-semibold py-1 sm:py-2 px-4 sm:px-6 rounded-(--radius-base) shadow-2xl shadow-black text-base sm:text-lg transition-colors">Bli med!</a>
 		</div>
 	</section>
 	
@@ -34,17 +34,17 @@ import Layout from "../layout/Layout.astro";
 	
 	<section id="contact" class="container mx-auto max-md:px-4 py-16">
 		<h2 class="max-w-3xl mx-auto text-3xl font-bold mb-4 tracking-wide">Kontakt oss</h2>
-		<form class="max-w-3xl mx-auto bg-white p-8 rounded shadow flex flex-col gap-4">
+		<form class="max-w-3xl mx-auto bg-linear-165 from-slate-300 from-45% via-65% to-95% via-slate-400 to-slate-200 p-(--padding-base) rounded-[calc(var(--radius-base)+var(--padding-base))] shadow flex flex-col hover:shadow-xl transition-shadow gap-4">
 			<label class="font-semibold">Navn
-				<input type="text" name="navn" required class="mt-1 p-2 border rounded w-full" />
+				<input type="text" name="navn" required class="mt-1 p-2 border rounded-(--radius-base) bg-white w-full" />
 			</label>
 			<label class="font-semibold">E-post
-				<input type="email" name="epost" required class="mt-1 p-2 border rounded w-full" />
+				<input type="email" name="epost" required class="mt-1 p-2 border rounded-(--radius-base) bg-white w-full" />
 			</label>
 			<label class="font-semibold">Melding
-				<textarea name="melding" required rows="4" class="mt-1 p-2 border rounded w-full"></textarea>
+				<textarea name="melding" required rows="4" class="mt-1 p-2 border rounded-(--radius-base) bg-white w-full"></textarea>
 			</label>
-			<button type="submit" class="bg-gradient-to-b from-oeb-600 to-oeb-950 hover:bg-oeb-950 text-white font-semibold py-2 px-6 rounded">Send</button>
+			<button type="submit" class="bg-gradient-to-b from-oeb-600 to-oeb-950 hover:bg-oeb-950 text-white font-semibold py-2 px-6 rounded-(--radius-base)">Send</button>
 		</form>
 	</section>
 </Layout>
