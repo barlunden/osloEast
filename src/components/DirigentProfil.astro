@@ -1,7 +1,6 @@
 ---
-import { Markdown } from '@astrojs/markdown-remark';
 const { profil } = Astro.props;
 ---
-<article class="max-w-2xl mx-auto my-8 p-6 bg-white rounded-lg shadow-md prose prose-lg">
-  <Markdown content={profil} />
+<article class="my-4 p-4 bg-white rounded-[calc(var(--radius-base)+var(--padding-base))] shadow-md prose prose-md">
+  <profil.Content />
 </article>

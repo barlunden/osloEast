@@ -43,7 +43,7 @@ export default function Calendar() {
 			id="calendar"
 			className="bg-gradient-to-br from-oebl-900 via-oebl-800 to-oebl-600"
 		>
-      <div className="max-w-3xl mx-auto max-md:px-4 py-16 ">
+      <div className="max-w-4xl mx-auto max-md:px-4 py-16 ">
 
 			<h2 className="text-2xl sm:text-4xl font-extrabold mb-8 tracking-wide text-white drop-shadow">
 				Aktivitetskalender

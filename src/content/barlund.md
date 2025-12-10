@@ -1,19 +1,15 @@
 ---
-navn: Age Jan Barlund
-bilde: /assets/dirigenter/barlund.jpg
-rolle: Dirigent
+layout: ../layout/MarkdownLayout.astro
+title: "Åge Jan Barlund"
+author: "Åge Jan Barlund"
+date: "10 Dec 2025"
 ---
+<!-- ![Dirigentbilde](/assets/barlund.jpeg) -->
 
-![Age Jan Barlund](/assets/dirigenter/barlund.jpg)
+Åge Barlund er utdannet trombonist og dirigent ved Norges musikkhøgskole, med videreutdanning i dirigering, musikkproduksjon, kulturledelse og programmering. Han brenner for å skape gode musikkopplevelser og å utvikle det frivillige musikklivet.
 
-## Om Age Jan Barlund
-
-Age Jan Barlund har lang erfaring som dirigent og musiker, og har vært engasjert i Oslo Øst Blåseensemble siden oppstarten. Han brenner for å utvikle unge musikanter og skape gode musikalske opplevelser.
-
-Han har bakgrunn fra både skolekorps og profesjonelle ensembler, og er kjent for sitt engasjement og sin evne til å inspirere.
-
-> «Musikk handler om glede, fellesskap og utvikling – for både utøvere og publikum.»
-
+Trivsel og mestring er sentrale verdier i hans arbeid. Åge jobber for at alle skal oppleve trygghet, utvikling og musikkglede – uansett nivå.
+<!-- 
 ### Kontakt
 
-E-post: [agejan@osloeastwindensemble.no](mailto:agejan@osloeastwindensemble.no)
+E-post: [aage@barlundmusikk.no](mailto:aage@barlundmusikk.no) -->
