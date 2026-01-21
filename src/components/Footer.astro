@@ -1,27 +1,41 @@
 ---
+// src/components/Footer.astro
 const year = new Date().getFullYear();
 ---
-<footer
-  class="bg-gradient-to-br from-oebl-900 via-oebl-800 to-oebl-600 py-8"
->
+<footer class="bg-gradient-to-br from-oebl-900 via-oebl-800 to-oebl-600 text-white border-t-2 border-oebl-950">
+  <div class="container mx-auto px-4 py-12">
+    <div class="flex flex-col items-center text-center gap-4">
+      <div class="space-y-1">
+        <h3 class="text-xl font-bold tracking-wider">Oslo Øst Blåseensemble</h3>
+        <p class="text-oebl-200 text-sm">Organisasjonsnummer: 930 735 841</p>
+      </div>
 
-  <div class="container mx-auto text-center text-white">
-    <span class="text-oebl-200">Org.nr: 930 735 841</span>
-    <address class="not-italic text-oebl-100 mb-2">
-      E-post: <a href="mailto:kontakt@osloeastwindensemble.no" class="underline text-oebl-50 transition-colors hover:text-oebl-100">kontakt@osloeastwindensemble.no</a>
-    </address>
+      <address class="not-italic">
+        <span class="block text-oebl-200 text-sm mb-1 uppercase tracking-widest font-semibold">Kontakt oss</span>
+        <a 
+          href="mailto:kontakt@osloeastwindensemble.no" 
+          class="text-lg underline underline-offset-4 decoration-oebl-400 hover:text-oebl-100 hover:decoration-white transition-all"
+        >
+          kontakt@osloeastwindensemble.no
+        </a>
+      </address>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-white/10 text-center space-y-3">
+      <p class="text-sm font-medium text-oebl-200">
+        &copy; {year} Oslo Øst Blåseensemble
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 text-[10px] sm:text-xs uppercase tracking-widest text-oebl-300">
+        <p>
+          Utviklet av 
+          <a href="https://cominoweb.no" class="underline hover:text-white transition-colors">Comino Web AS</a>
+        </p>
+        <p>
+          Header video: 
+          <a href="https://www.pexels.com/video/people-on-the-band-playing-a-music-5257718/" target="_blank" class="underline hover:text-white transition-colors">Kelly / Pexels</a>
+        </p>
+      </div>
+    </div>
   </div>
 </footer>
-<div class="relative z-10 bg-gradient-to-tr from-oebl-900/95 via-oebl-800/95 to-oebl-600/95 border-t-2 border-oebl-950 p-4 pb-6 text-center">
-  <p class="text-md font-semibold text-oebl-200">
-    &copy; {year} Oslo Øst Blåseensemble
-  </p>
-  <p class="text-xs text-oebl-100 mt-2">
-    Nettside av <a
-      href="https://cominoweb.no"
-      class="underline hover:text-oebl-200 font-semibold">Comino Web AS</a>
-  </p>
-  <p class="text-xs text-oebl-300">
-    <a href="https://www.pexels.com/video/people-on-the-band-playing-a-music-5257718/" target="_blank" class="underline hover:text-oebl-100">Header video av Kelly</a>
-  </p>
-</div>

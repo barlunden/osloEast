@@ -1,19 +1,39 @@
 ---
-// 1. The frontmatter prop gives access to frontmatter and other data
+import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
-<html>
-  <head>
-    <!-- Add other Head elements here, like styles and meta tags. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>{frontmatter.title}</title>
-  </head>
-  <body>
-    <!-- Add other UI components here, like common headers and footers. -->
-    <h3 class="text-xl md:text-2xl">{frontmatter.title}</h3>
-    <p class="text-xs">Written on: {frontmatter.date}</p>
-    <!-- 2. Rendered HTML will be passed into the default slot. -->
-    <slot />
-  </body>
-</html>
+
+<Layout title={frontmatter.title}>
+  <section class="py-20 bg-white">
+    <div class="container mx-auto max-w-3xl px-4">
+      
+      <header class="mb-12 border-b border-gray-100 pb-8">
+        <h1 class="text-4xl md:text-5xl font-black text-oebl-950 mb-4">
+          {frontmatter.title}
+        </h1>
+        <p class="text-oebl-600 font-medium tracking-wide uppercase text-sm">
+          {frontmatter.rolle || "Ensemblet"}
+        </p>
+      </header>
+
+      <article class="prose prose-lg prose-oebl max-w-none">
+        <slot />
+      </article>
+
+      {frontmatter.email && (
+        <div class="mt-12 p-6 bg-oebl-50 rounded-2xl border border-oebl-100">
+          <h3 class="text-lg font-bold text-oebl-900 mb-2">Ta kontakt</h3>
+          <a href={`mailto:${frontmatter.email}`} class="text-oebl-700 hover:underline">
+            {frontmatter.email}
+          </a>
+        </div>
+      )}
+      
+      <div class="mt-12">
+        <a href="/" class="text-sm font-semibold text-oebl-600 hover:text-oebl-900">
+          ← Tilbake til forsida
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,7 +1,8 @@
 ---
-layout: ../layout/MarkdownLayout.astro
 title: "Kai Svestad"
-author: "Åge Jan Barlund"
+rolle: "Dirigent"
+bilde: "/assets/kai.png"
+email: ""
 date: "10 Dec 2025"
 ---
 Kai Svestad er slagverker og pedagog ved Oslo kulturskole, der han i en årrekke har undervist i både slagverk og slagverksensemble. Han er aktiv som dirigent og instruktør i skolekorpsmiljøet i Oslo og har blant annet ledet Ekeberg skoles musikkorps og undervist i ulike ensembleprosjekt.

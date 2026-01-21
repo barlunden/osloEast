@@ -1,0 +1,77 @@
+---
+// src/components/ContactForm.astro
+---
+<section id="contact" class="py-24 bg-oeg-50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl sm:text-5xl font-black text-oebl-950 mb-4 tracking-tight">
+          Vil du spela med oss?
+        </h2>
+        <p class="text-oebl-600 text-lg">
+          Send oss ei melding, så høyrer du frå oss om kort tid!
+        </p>
+      </div>
+
+      <form
+        class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl shadow-oebl-900/5 border border-oebl-100 flex flex-col gap-8"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col gap-2">
+            <label for="navn" class="text-xs font-black uppercase tracking-widest text-oebl-800 ml-1">
+              Fullt namn
+            </label>
+            <input
+              type="text"
+              id="navn"
+              name="navn"
+              required
+              placeholder="Ola Nordmann"
+              class="w-full bg-oebl-50 border-2 border-transparent focus:border-oeb-400 focus:bg-white rounded-2xl p-4 outline-none transition-all placeholder:text-oebl-300"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="epost" class="text-xs font-black uppercase tracking-widest text-oebl-800 ml-1">
+              E-postadresse
+            </label>
+            <input
+              type="email"
+              id="epost"
+              name="epost"
+              required
+              placeholder="din@epost.no"
+              class="w-full bg-oebl-50 border-2 border-transparent focus:border-oeb-400 focus:bg-white rounded-2xl p-4 outline-none transition-all placeholder:text-oebl-300"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="melding" class="text-xs font-black uppercase tracking-widest text-oebl-800 ml-1">
+            Kva lurer du på?
+          </label>
+          <textarea
+            id="melding"
+            name="melding"
+            required
+            rows="5"
+            placeholder="Fortel oss gjerne kva instrument du spelar..."
+            class="w-full bg-oebl-50 border-2 border-transparent focus:border-oeb-400 focus:bg-white rounded-2xl p-4 outline-none transition-all placeholder:text-oebl-300 resize-none"
+          ></textarea>
+        </div>
+
+        <div class="flex justify-center sm:justify-start">
+          <button
+            type="submit"
+            class="group relative inline-flex items-center justify-center bg-gradient-to-r from-oer-700 to-oer-600 hover:from-oer-600 hover:to-oer-500 text-white font-black py-4 px-12 rounded-2xl shadow-lg shadow-oer-900/20 transition-all transform hover:-translate-y-1 active:scale-95 overflow-hidden"
+          >
+            <span class="relative z-10">Send melding</span>
+            <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>

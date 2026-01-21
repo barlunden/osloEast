@@ -1,61 +1,72 @@
 ---
-// Astro-komponent for Navbar uten React
+// src/components/Navbar.astro
 const navLinks = [
   { href: '#hero', label: 'Hjem' },
   { href: '#about', label: 'Om oss' },
   { href: '#contact', label: 'Kontakt' }
 ];
 ---
-<header class="sticky top-0 z-50 transition-all duration-300 bg-oeg-100 text-oeb-950 shadow">
-  <nav class="container mx-auto flex flex-col sm:flex-row justify-between items-center py-2 sm:py-4 px-2 sm:px-0 relative">
-    <div class="font-bold text-lg sm:text-xl text-oeb-950 tracking-wider mb-2 sm:mb-0">Oslo Øst Blåseensemble</div>
-    <!-- Hamburger button (visible on mobile) -->
-     <button
-     id="hamburger-btn"
-     class="sm:hidden absoulute right-2 top-2 p-2 rounded focus:ouline-none focus:ring-2 focus:ring-oeb-950"
-     aria-label="Åpne meny"
-     type="button"
-     >
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-oebl-100 shadow-sm">
+  <nav class="container mx-auto flex items-center justify-between py-4 px-4 sm:px-6">
+    
+    <div class="font-black text-xl sm:text-2xl text-oebl-950 tracking-tighter z-50">
+      OSLO ØST <span class="text-oer-600">BLÅSEENSEMBLE</span>
+    </div>
+
+    <button
+      id="hamburger-btn"
+      class="sm:hidden p-2 rounded-xl bg-oebl-50 text-oebl-950 focus:outline-none z-50 transition-colors hover:bg-oebl-100"
+      aria-label="Åpne meny"
+      aria-expanded="false"
+    >
+      <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
 
     <ul 
       id="nav-menu"
-      class="flex flex-col sm:flex-row gap-2 sm:gap-6 w-full sm:w-auto text-base sm:text-lg
-        bg-oeg-100 sm:bg-transparent absolute sm:static left-0 right-0 top-full sm:top-auto
-        shadow sm:shadow-none transition-all duration-300
+      class="
+        flex flex-col sm:flex-row gap-0 sm:gap-8
+        absolute sm:static left-0 right-0 top-full 
+        bg-white sm:bg-transparent shadow-2xl sm:shadow-none
+        transition-all duration-300 ease-in-out
         max-h-0 sm:max-h-none overflow-hidden sm:overflow-visible
+        px-6 sm:px-0 rounded-b-3xl sm:rounded-none
       "
     >
       {navLinks.map(link => (
-        <li><a href={link.href} class="block px-4 py-2 hover:text-oer-800 text-oeb-950">{link.label}</a></li>
+        <li>
+          <a 
+            href={link.href} 
+            class="block py-5 sm:py-2 text-oebl-900 font-bold text-lg sm:text-sm uppercase tracking-widest hover:text-oer-600 transition-colors border-b border-oebl-50 sm:border-none"
+          >
+            {link.label}
+          </a>
+        </li>
       ))}
     </ul>
   </nav>
+
   <script>
-    // Enkel toggling av menyen på mobil
     const btn = document.getElementById('hamburger-btn');
     const menu = document.getElementById('nav-menu');
+    
     if (btn && menu) {
       btn.addEventListener('click', () => {
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
         menu.classList.toggle('max-h-0');
-        menu.classList.toggle('max-h-60');
-        menu.classList.toggle('py-2');
+        menu.classList.toggle('max-h-[400px]'); // Litt raus høgde
+        btn.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
+      });
+
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.add('max-h-0');
+          menu.classList.remove('max-h-[400px]');
+          btn.setAttribute('aria-expanded', 'false');
+        });
       });
     }
   </script>
-  <style>
-    /* For smooth open/close på mobil */
-    #nav-menu {
-      transition: max-height 0.3s, padding 0.3s;
-    }
-    @media (min-width: 640px) {
-      #nav-menu {
-        max-height: none !important;
-        padding: 0 !important;
-      }
-    }
-  </style>
 </header>

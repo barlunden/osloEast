@@ -2,12 +2,10 @@
 @plugin "@tailwindcss/typography";
 @import '@fontsource-variable/montserrat';
 
-body {
-  font-family: 'Montserrat Variable', sans-serif;
-}
 
 /* Fargar: oer = osloEastRed, oeb = osloEastBlue, oeg = osloEastGray, oebl = osloEastBlåGRrå */
 @theme {
+  --font-sans: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif;
     --padding-base: 1rem;
     --radius-base: 0.5rem;
     
@@ -59,6 +57,19 @@ body {
 --color-oebl-800: #23263d;
 --color-oebl-900: #181a28;
 --color-oebl-950: #11111a;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-oebl-950 bg-white;
+  }
+  
+  /* Sikrar at Typography-pluginen brukar dine fargar */
+  .prose {
+    --tw-prose-headings: var(--color-oebl-900);
+    --tw-prose-body: var(--color-oebl-800);
+    --tw-prose-links: var(--color-oer-600);
+  }
 }
 
 .clip {

@@ -1,6 +1,31 @@
 ---
+// src/components/DirigentProfil.astro
 const { profil } = Astro.props;
+const { Content } = profil;
+const { title, rolle, bilde } = profil.frontmatter;
 ---
-<article class="my-4 p-4 bg-white rounded-[calc(var(--radius-base)+var(--padding-base))] shadow-md prose prose-md">
-  <profil.Content />
+
+<article class="flex flex-col bg-white rounded-3xl p-8 shadow-xl shadow-oebl-900/5 border border-oebl-100 transition-all hover:shadow-oebl-900/10">
+  <div class="flex flex-col items-center text-center mb-6">
+    {bilde && (
+      <div class="relative mb-4">
+        <div class="absolute inset-0 bg-gradient-to-tr from-oer-600 to-oeb-400 rounded-full blur-sm opacity-50"></div>
+        <img 
+          src={bilde} 
+          alt={title} 
+          class="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-md"
+        />
+      </div>
+    )}
+    <h3 class="text-2xl font-black text-oebl-950 tracking-tight leading-tight">
+      {title}
+    </h3>
+    <p class="text-oer-600 font-bold uppercase tracking-widest text-xs mt-2">
+      {rolle}
+    </p>
+  </div>
+
+  <div class="prose prose-sm prose-oebl max-w-none text-oebl-800 leading-relaxed">
+    <Content />
+  </div>
 </article>

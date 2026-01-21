@@ -1,7 +1,8 @@
 ---
-layout: ../layout/MarkdownLayout.astro
 title: "Åge Jan Barlund"
-author: "Åge Jan Barlund"
+rolle: "Dirigent"
+bilde: "/assets/barlund.png"
+email: "aage@barlundmusikk.no"
 date: "10 Dec 2025"
 ---
 <!-- ![Dirigentbilde](/assets/barlund.jpeg) -->
