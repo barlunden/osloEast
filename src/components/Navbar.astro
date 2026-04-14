@@ -6,16 +6,16 @@ const navLinks = [
   { href: '#contact', label: 'Kontakt' }
 ];
 ---
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-oebl-100 shadow-sm">
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/50 to-transparent transition-[background,backdrop-filter] duration-300">
   <nav class="container mx-auto flex items-center justify-between py-4 px-4 sm:px-6">
     
-    <div class="font-black text-xl sm:text-2xl text-oebl-950 tracking-tighter z-50">
-      OSLO ØST <span class="text-oer-600">BLÅSEENSEMBLE</span>
+    <div class="font-black text-xl sm:text-2xl text-white tracking-tighter z-50">
+      OSLO ØST <span class="text-oer-400">BLÅSEENSEMBLE</span>
     </div>
 
     <button
       id="hamburger-btn"
-      class="sm:hidden p-2 rounded-xl bg-oebl-50 text-oebl-950 focus:outline-none z-50 transition-colors hover:bg-oebl-100"
+      class="sm:hidden p-2 rounded-xl bg-white/10 text-white focus:outline-none z-50 transition-colors hover:bg-white/20"
       aria-label="Åpne meny"
       aria-expanded="false"
     >
@@ -29,7 +29,7 @@ const navLinks = [
       class="
         flex flex-col sm:flex-row gap-0 sm:gap-8
         absolute sm:static left-0 right-0 top-full 
-        bg-white sm:bg-transparent shadow-2xl sm:shadow-none
+        bg-oebl-950 sm:bg-transparent shadow-2xl sm:shadow-none
         transition-all duration-300 ease-in-out
         max-h-0 sm:max-h-none overflow-hidden sm:overflow-visible
         px-6 sm:px-0 rounded-b-3xl sm:rounded-none
@@ -39,7 +39,7 @@ const navLinks = [
         <li>
           <a 
             href={link.href} 
-            class="block py-5 sm:py-2 text-oebl-900 font-bold text-lg sm:text-sm uppercase tracking-widest hover:text-oer-600 transition-colors border-b border-oebl-50 sm:border-none"
+            class="block py-5 sm:py-2 text-white font-bold text-lg sm:text-sm uppercase tracking-widest hover:text-oer-400 transition-colors border-b border-oebl-800 sm:border-none"
           >
             {link.label}
           </a>
@@ -51,12 +51,22 @@ const navLinks = [
   <script>
     const btn = document.getElementById('hamburger-btn');
     const menu = document.getElementById('nav-menu');
-    
+    const header = document.getElementById('site-header');
+
+    // Legg til solid bakgrunn når brukaren scrollar forbi hero
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        header?.classList.add('is-scrolled');
+      } else {
+        header?.classList.remove('is-scrolled');
+      }
+    }, { passive: true });
+
     if (btn && menu) {
       btn.addEventListener('click', () => {
         const isExpanded = btn.getAttribute('aria-expanded') === 'true';
         menu.classList.toggle('max-h-0');
-        menu.classList.toggle('max-h-[400px]'); // Litt raus høgde
+        menu.classList.toggle('max-h-[400px]');
         btn.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
       });
 
@@ -70,3 +80,11 @@ const navLinks = [
     }
   </script>
 </header>
+
+<style>
+  /* Solid bakgrunn når ein har scrolla forbi hero */
+  #site-header.is-scrolled {
+    background: rgba(17, 17, 26, 0.95); /* oebl-950 */
+    backdrop-filter: blur(12px);
+  }
+</style>
